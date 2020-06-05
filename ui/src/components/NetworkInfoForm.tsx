@@ -4,6 +4,7 @@ import { Flex, Heading } from 'rendition';
 import { Form } from 'rendition/dist/unstable';
 import { Network, NetworkInfo } from './App';
 import { RenditionUiSchema } from 'rendition/dist/unstable/unstable-typings';
+import VECC_Logo from '../img/Logo.png';
 
 const getSchema = (availableNetworks: Network[]): JSONSchema6 => ({
 	type: 'object',
@@ -86,8 +87,9 @@ export const NetworkInfoForm = ({
 			mt={5}
 		>
 			<Heading.h3 align="center" mb={4}>
-				Hi! Please choose your WiFi from the list
+				Hi! Please choose your WiFi from the list to connect to VECC!
 			</Heading.h3>
+			<img style={{ width: 300 }} src={VECC_Logo} />
 
 			<Form
 				width={['100%', '80%', '60%', '40%']}
